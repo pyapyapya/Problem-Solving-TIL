@@ -16,8 +16,7 @@
 
 <p>토너먼트를 만들 때에는 이미 추첨이 된 순서대로 선수들을 배치하고, 왼쪽에서 오른쪽의 순서가 어긋나지 않도록 시합을 정한다. 물론 부전승을 임의로 만들 수 있지만, 토너먼트가 꼬여서는 안 된다. 또한, 각 시합에 임하는 두 선수의 랭킹의 차이의 합이 최소가 되도록 하려 한다.</p>
 
-<p style="text-align: center;"><img alt="" height="208" src="acmicpc.net/JudgeOnline/upload/201008/tour.PNG" width="532"></p>
-
+<p style="text-align: center;"><img alt="" height="208" src= "https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/upload/201008/tour.PNG" width="532"></p>
 <p>예를 들어 추첨 결과가 차례로 랭킹 1, 6, 2, 5, 3, 4위의 선수들이었을 때의 토너먼트 세 개가 위에 있다. <A>의 경우는 각 시합이 (1 6), (2 5), (3 4), (1 2), (1 3)으로 랭킹 차이의 합이 5 + 3 + 1 + 1 + 2 = 12가 된다. 반면에 <B>는 11이, <C>는 10이 된다.</p>
 
 <p>토너먼트 추첨 결과가 주어졌을 때, 각 시합에 임하는 두 선수의 랭킹 차이의 총 합의 최솟값을 구하는 프로그램을 작성하시오.</p>
