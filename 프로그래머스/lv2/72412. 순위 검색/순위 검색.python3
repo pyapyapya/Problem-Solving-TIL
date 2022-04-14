@@ -1,0 +1,39 @@
+from itertools import combinations
+from bisect import bisect_left
+
+def solution(info, query):
+    info_dict = {}
+    
+    for i in info:
+        information = i.split()
+        key = information[:-1]
+        value = int(information[-1])
+        for n in range(5):
+            comb_key = list(combinations(key, n))
+            for k in comb_key:
+                info_key = ''.join(k)
+                if info_key not in info_dict:
+                    info_dict[info_key] = [value]
+                else:
+                    info_dict[info_key].append(value)
+    
+    for key in info_dict.keys():
+        info_dict[key] = sorted(info_dict[key])
+    
+    answer = []
+    for q in query:
+        q_value = q.split()[-1]
+        key = q[:-len(q_value)].strip().split(' and ')
+        key = ''.join(key)
+        key = key.replace('-', '')
+
+        if key not in info_dict:
+            answer.append(0)
+        else:
+            value = info_dict[key]
+            q_value = int(q_value)
+            
+            ans = bisect_left(value, q_value)
+            answer.append(len(value) - ans)
+        
+    return answer
