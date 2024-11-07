@@ -1,3 +1,8 @@
+# 리뷰
+- 1차원 그래프에서 2차원 그래프로 바꾸니 바로 풀렸다.
+  - 기존 방식) 일반 숫자 정렬 -> Greedy하게 큰 수부터 계산 `if idx >= h and h <= n - idx, idx start 1`
+  - 배열로 전부 계산 후, 최댓값을 정답으로 제출
+
 # [level 2] H-Index - 42747 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42747) 
